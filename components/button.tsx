@@ -3,6 +3,7 @@ import React from 'react'
 import { CustomButtonProps } from '@/types'
 import { colors, radius } from '@/constants/theme'
 import { verticalScale } from '@/utils/styling'
+import Loading from './loading'
 
 const Button = ({
     style,
@@ -15,7 +16,7 @@ const Button = ({
         return (
             <View style={[styles.button,style, {backgroundColor: colors.buttonSecondary}]}>
                 {/* loading */}
-
+                <Loading/>
             </View>
         )
     }
