@@ -1,53 +1,62 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+import {scale, verticalScale} from "../utils/styling";
 
-import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+export const colors = {
+  primary: "#32CD32",      // Vibrant green (matches logo lightning bolt)
+  secondary: "#00BFFF",    // Bright blue (matches logo swoosh)
+  accent: "#7CFC00",       // Light green for highlights
+  background: "#0D1B1E",   // Dark navy background (from logo backdrop)
+  surface: "#F5F5F5",      // Light neutral for cards or surfaces
+  textPrimary: "#FFFFFF",  // White for main text
+  textSecondary: "#A9A9A9",// Muted gray for secondary text
+  success: "#28A745",      // Green for success states
+  warning: "#FFC107",      // Yellow for warnings
+  error: "#DC3545",        // Red for errors
+  buttonPrimary: "#32CD32",// Primary button color
+  buttonSecondary: "#00BFFF",// Secondary button color
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-  },
-});
+
+//used for margin and padding on left and right
+export const spacingX = {
+    _3: scale(3),
+    _5: scale(5),
+    _7: scale(7),
+    _10: scale(10),
+    _12: scale(12),
+    _15: scale(15),
+    _20: scale(20),
+    _25: scale(25),
+    _30: scale(30),
+    _35: scale(35),
+    _40: scale(40),
+}
+
+//used for margin and padding on top and bottom
+export const spacingY = {
+    _5: verticalScale(5),
+    _7: verticalScale(7),
+    _10: verticalScale(10),
+    _12: verticalScale(12),
+    _15: verticalScale(15),
+    _17: verticalScale(17),
+    _20: verticalScale(20),
+    _25: verticalScale(25),
+    _30: verticalScale(30),
+    _35: verticalScale(35),
+    _40: verticalScale(40),
+    _50: verticalScale(50),
+    _60: verticalScale(60),
+}
+
+//used for border radius
+export const radius = {
+    _3: verticalScale(3),
+    _6: verticalScale(6),
+    _10: verticalScale(10),
+    _12: verticalScale(12),
+    _15: verticalScale(15),
+    _17: verticalScale(17),
+    _20: verticalScale(20),
+    _30: verticalScale(30),
+}
