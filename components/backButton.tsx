@@ -9,14 +9,15 @@ import { colors, radius } from '@/constants/theme';
 const BackButton = ({
     style,
     iconSize = 26,
+    color = colors.primary
 
-}: BackButtonProps) => {
+}: BackButtonProps & { color?: string }) => {
     const router = useRouter();
   return (
     <TouchableOpacity onPress={() => router.back()} style={[styles.button, style]}>
       <CaretLeftIcon
       size={verticalScale(iconSize)}
-      color={colors.primary}
+      color={color}
       weight="bold"> 
       </CaretLeftIcon>
     </TouchableOpacity>

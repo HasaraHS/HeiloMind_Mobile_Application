@@ -129,7 +129,7 @@ const Login = () => {
           {/* Footer inside card */}
           <View style={styles.footer}>
             <Typo size={15}>Don&apos;t have an account?</Typo>
-            <Pressable onPress={() => router.push("/(auth)/register")}>
+            <Pressable onPress={() => router.navigate("/(auth)/register")}>
               <Typo size={15} color={colors.success} fontWeight={"700"}>
                 Sign Up
               </Typo>
