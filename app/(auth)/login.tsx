@@ -149,11 +149,11 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     alignItems: 'center',
-    marginTop: spacingY._20,
+    
   },
   topImage: {
-    width: verticalScale(310),
-    height: verticalScale(290),
+    width: verticalScale(300),
+    height: verticalScale(300),
   },
   topRow: {
   flexDirection: 'row',
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     height: verticalScale(50),
     borderRadius: radius._20,
     borderWidth: 1,
-    borderColor: colors.textSecondary,
+    borderColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.background,
