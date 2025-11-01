@@ -7,8 +7,10 @@ import { verticalScale } from '@/utils/styling';
 import Button from '@/components/button';
 import Animated, { FadeIn, FadeInDown, FadeInUp } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 
 const Welcome = () => {
+    const router = useRouter();
   return (
     <ScreenWrapper>
       {/* Background image covering full screen */}
@@ -26,7 +28,7 @@ const Welcome = () => {
         <View style={styles.overlay}>
           {/* Top right Sign In button */}
           <Animated.View entering={FadeIn.duration(800).springify()}>
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={() => router.push('/(auth)/login')}>
               <Typo fontWeight={'600'} size={16} color={colors.surface}>
                 Sign In
               </Typo>
@@ -36,14 +38,13 @@ const Welcome = () => {
           {/* Centered main content */}
           <Animated.View
             entering={FadeInUp.duration(1000).delay(200).springify()}
-            style={styles.middleSection}
-          >
+            style={styles.middleSection}>
+
             <Typo
               size={42}
               fontWeight={'800'}
               color={colors.surface}
-              style={{ textAlign: 'center' }}
-            >
+              style={{ textAlign: 'center' }}>
               Welcome to HeiloMind
             </Typo>
 
@@ -59,9 +60,9 @@ const Welcome = () => {
           {/* Footer section */}
           <Animated.View
             entering={FadeInDown.duration(1200).delay(400).springify().damping(18)}
-            style={styles.footer}
-          >
-            <Button style={styles.getStartedButton}>
+            style={styles.footer}>
+                
+            <Button style={styles.getStartedButton} onPress={() => router.push('/(auth)/register')}>
               <Typo size={20} color={colors.background} fontWeight={'700'}>
                 Get Started
               </Typo>
