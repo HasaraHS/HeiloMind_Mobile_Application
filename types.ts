@@ -107,3 +107,11 @@ export type ResponseType = {
     data? : any;
     msg? : string;
 };
+
+export interface InputProps extends TextInputProps {
+    icon? : React.ReactNode;
+    containerStyle? : ViewStyle;
+    inputStyle? : TextStyle;
+    inputRef? : React.RefObject<TextInput>;
+    borderColor?: string;
+}
