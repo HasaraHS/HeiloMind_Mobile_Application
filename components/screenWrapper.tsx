@@ -5,16 +5,18 @@ import { colors } from '@/constants/theme';
 
 const {height} = Dimensions.get('window');
 
-const ScreenWrapper = ({style, children}: ScreenWrapperProps) => {
-    let paddingTop = Platform.OS === 'android' ? height * 0.06 : 50;
+const ScreenWrapper = ({ style, children, noPadding }: ScreenWrapperProps & { noPadding?: boolean }) => {
+    let paddingTop = Platform.OS === 'android' ? height * 0.005 : height * 0.04;
   return (
     <View style={[{
-        paddingTop,
+        paddingTop: noPadding ? 0 : paddingTop,
         flex: 1,
         backgroundColor: colors.background,
     },style]}>
 
-      <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
+      <StatusBar barStyle="light-content" 
+      translucent = {noPadding} //overlay status bar if full screen 
+      backgroundColor={noPadding? 'transparent' : colors.background}/>
       {children}
     </View>
   )

@@ -11,7 +11,7 @@ export const colors = {
   textSecondary: "#A9A9A9",// Muted gray for secondary text
   success: "#28A745",      // Green for success states
   warning: "#FFC107",      // Yellow for warnings
-  error: "#DC3545",        // Red for errors
+  error: "#ef5463ff",        // Red for errors
   buttonPrimary: "#32CD32",// Primary button color
   buttonSecondary: "#00BFFF",// Secondary button color
 };
